@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "offline": true,
+  "embedded_images": 4,
+  "persisted_sessions": 1,
+  "favorite_weight": 3,
+  "photo_bytes_persisted": false,
+  "download_matches_local_asset": true,
+  "dark_text_contrast_verified": true,
+  "page_errors": [],
+  "remote_requests": [],
+  "external_file_requests": [],
+  "viewports": [
+    320,
+    393,
+    430,
+    1440
+  ],
+  "small_dialog_targets": []
+}

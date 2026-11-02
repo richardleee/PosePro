@@ -1,0 +1,17 @@
+{
+  "name": "framecoach",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MusePilot — pose & composition guidance tool",
+  "workspaces": [
+    "packages/shared",
+    "packages/api",
+    "packages/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:web": "npm run dev -w @framecoach/web",
+    "dev:api": "npm run dev -w @framecoach/api",
+    "build": "npm run build --workspaces --if-present"
+  }
+}

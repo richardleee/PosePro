@@ -1,0 +1,312 @@
+品牌定位一句话
+
+FrameCoach — Your AI Portrait Director
+
+再往下可以接：
+
+Learn to pose.
+Master your angles.
+Create better portraits.
+
+品牌名：FrameCoach
+副标题：AI Portrait Camera Coach
+Slogan：Your AI Portrait Director
+
+
+
+
+# FrameCoach MVP 完整 PRD（可直接粘贴给 Cursor AI 开发）
+
+> 
+> 项目：FrameCoach
+> 产品定位：AR 人像摄影指导助手，**不替代手机原生相机**。核心资产：人物偏好档案 + Pre-shoot Planner 拍摄规划清单。
+> 目标首发市场：海外 iOS（美国、澳洲），后续加拿大 / 英国，最后独立国内版本。
+> 开发顺序：先开发 Web Demo（验证付费转化，无 AR），Web 验证通过后，再开发 iOS App MVP。
+> 版本：V1.0 MVP
+> 核心假设验证目标：
+> 
+> 
+> 1. 用户愿意创建单人 / 双人人物偏好档案
+> 2. 用户愿意订阅付费，生成旅行拍摄规划清单
+> 3. 「旅行前规划 + 现场 AR 指导」链路提升使用频次，解决低频工具痛点
+> V1 砍掉功能（放到 V2 迭代）：Style Trainer、3 人及以上多人姿态识别、PDF 导出打印、高级场景包（Elopement、Business Portrait）。
+
+> 
+> 重要产品底层原则：
+> 
+> 
+> 1. 所有端侧 AI 姿态推理，原始摄像头画面不上传服务器；仅本地提取人体关键点用于姿势匹配。
+> 2. 人物档案默认本地存储；云端同步必须用户手动打开开关 + 二次确认授权，遵循 GDPR/CCPA。
+> 3. 营销文案禁止宣称 “AI 摄影师”，定位为 AI pose & composition guidance tool，规避海外虚假宣传投诉。
+> 4. AR 语音指导**默认关闭**，文字 + 骨骼 AR 为默认模式，解决公共场景社死问题。
+
+## 目录
+
+1. 用户角色 & 用户故事
+2. 功能范围（Web Demo + iOS App MVP）
+3. 页面清单、页面元素、交互逻辑、页面跳转关系
+4. 权限、隐私合规设计（GDPR/CCPA）
+5. 产品付费分层规则
+6. UI/UX 全局规范
+7. 技术架构概要
+8. 异常场景与错误处理
+9. 埋点指标（业务统计）
+10. 项目里程碑计划
+11. 风险清单与应对方案
+
+---
+
+## 1. 用户角色 & 用户故事
+
+### 用户角色
+
+1. Photographer（拍摄者：伴侣 / 朋友 / 同事，不懂构图、不会指导被拍者姿势）
+2. Subject（被拍摄者：情侣、旅行用户，有明确喜欢 / 讨厌的拍摄角度、姿势风格）
+
+### 用户故事
+
+1. 作为被拍摄者，我可以创建单人人物档案，记录我的身形、喜欢 / 不喜欢的构图、姿势风格与拍摄禁忌。
+2. 作为情侣，我可以创建双人档案，保存两个人合照的统一偏好。
+3. 作为用户，旅行前上传目的地照片，选择人物档案，系统自动生成离线可用的姿势 + 构图拍摄清单。
+4. 作为拍摄者（iOS App），现场开启 AR 实时指导：画面叠加骨骼线、构图辅助线，文字 / 可选语音提示机位调整、人物姿势。
+5. 作为 iOS 用户，看到满意姿势时，一键唤起苹果原生相机拍照，照片保存在系统相册。
+6. 作为 Pro 订阅用户，可以生成共享网页卡片，把我的拍照偏好发给帮我拍照的人，对方无需注册 / 下载 App。
+7. 系统自动采集隐性行为信号（跳过姿势、切换姿势、唤起相机），本地自动调整后续姿势推荐排序；**不强制手动点赞 / 踩**。
+
+---
+
+## 2. 功能范围
+
+### 2.1 Web Demo（优先开发，无摄像头 AR，用于广告投放验证付费意愿）
+
+> 
+> 技术栈：React + IndexedDB 本地存储；后端 Node.js；支付 Stripe
+> 能力：人物档案管理、Pre-shoot Planner 拍摄清单生成、共享卡片、账号订阅管理。
+> 边界：**无实时摄像头、无 AR 骨骼、无语音指导**。
+
+#### Web Demo 模块清单
+
+1. 人物档案管理
+   - Free：最多 1 个单人档案
+   - Pro：最多 5 单人档案 + 2 双人档案
+   - 档案字段：名称、身高、身形标签、审美风格偏好、构图偏好、拍摄禁忌、自定义备注
+   - 存储：默认浏览器本地 IndexedDB；用户主动开启云端备份才加密存入后端数据库
+2. Pre-shoot Planner 拍摄规划器
+   - 步骤：填写目的地名称 → 选择场景标签 → 可选上传目的地参考图 → 选择人物 / 双人档案 → 生成 3~5 组拍摄方案
+   - 每组方案包含：构图类型、简易线稿示意图、被拍者姿势描述、拍摄者机位提示
+   - 清单支持离线网页查看
+3. 共享偏好卡片
+   - Pro 用户生成只读网页链接，分享给他人；访问者无需登录，仅查看人物偏好 + 推荐姿势。不可编辑。
+4. 账号与订阅管理
+   - 邮箱 / Google 登录；Stripe 支付；7 天免费试用；月付 $4.99 / 年付 $34.99
+   - 账户页：订阅状态、云端同步开关、一键删除全部档案、隐私政策入口
+5. 落地页、注册登录、FAQ 帮助页
+
+### 2.2 iOS App MVP（Web 验证通过后开发，复用 Web 全部业务逻辑，新增 AR 实时取景模块）
+
+> 
+> 技术栈：Swift + SwiftUI；AVFoundation；MediaPipe/Apple Vision 端侧姿态识别；CoreData 本地存储；App Store IAP
+> 复用 Web：人物档案、Pre-shoot Planner、共享卡片、订阅账号体系，Web 与 iOS 订阅权限互通。
+> 新增 iOS 独有模块：
+
+1. AR Live Coach 实时 AR 取景指导
+   - 全屏摄像头预览，上层叠加半透明 Overlay：三分线 / 框架构图线、人体骨骼关键点线框（单人 / 双人）
+   - 画面分区提示：顶部 = 拍摄者提示文字；底部 = 被拍摄者提示文字
+   - 语音 Coach 开关（默认关闭），2 种英文音色：Minimalist / Casual Buddy
+   - 操作按钮：Next Pose（切换下一组姿势）、Open Native Camera（唤起系统相机）、Exit 退出 AR
+   - 环境检测：暗光 / 遮挡识别失败时，顶部警告横幅提示用户更换光线更好位置
+2. 照片简易复盘 Photo Review
+   - 导入系统相册照片；AI 识别构图姿态，结合人物档案给出简短改进建议；保存行为反馈用于偏好权重调整
+3. iOS 新手引导 Onboarding（首次打开 4 步引导）
+   - 介绍产品定位、隐私承诺、相机权限说明、引导创建第一个人物档案
+
+> 
+> ❌ V1 不开发：Style Trainer、多人 > 2 人识别、PDF 导出、场景包单独内购。
+
+---
+
+## 3. 页面清单、元素、交互 & 页面跳转关系
+
+### 全局通用组件（Web + iOS）
+
+1. 顶部导航：FrameCoach Logo；菜单：My Profiles / Shot Plans / Shared Cards / Account；CTA 订阅升级按钮
+2. 全局弹窗：GDPR 授权弹窗、档案删除确认、权限申请弹窗、环境警告弹窗（iOS）
+3. 按钮规范
+   - Primary：新建档案 / 生成拍摄清单
+   - Secondary：保存 / 预览 / 共享
+   - Tertiary：取消、返回
+4. 隐私标语（iOS 全局底部）：`On-device AI. Camera feed never leaves your phone.`
+
+### Web Demo 页面列表
+
+1. Landing Page【Web Only】
+   - 元素：Hero 标题、3 个卖点卡片、CTA「Start Free Trial」、隐私简述、FAQ 入口
+   - 交互：点击试用 → 注册登录页；TikTok/IG 广告落地页
+2. Signup/Login【Web Only】
+   - 元素：邮箱账号输入框、Google 一键登录
+   - 交互：注册成功 → 引导创建第一个人物档案，跳转 Dashboard
+3. Dashboard【共用 Web+iOS】
+   - 元素：欢迎文案；3 个入口卡片 Profiles / Shot Plans / Shared Cards；免费版剩余额度提示；新手引导
+   - 跳转：Profiles 卡片→档案列表；Shot Plans→清单列表；Shared Cards→卡片管理；Account→账户页
+4. Profiles List【共用】
+   - 元素：标题 Your Photo Profiles；+New Profile 下拉按钮（Single Person / Couple）；档案卡片列表（名称 + 风格标签）；卡片操作 Edit/Duplicate/Delete
+   - 跳转：新建按钮→档案编辑表单；点击档案卡片→档案详情编辑页
+5. Profile Edit Form【共用】
+   - 单人表单字段：Name、Height、Body type 标签、Preferred Aesthetic、Preferred Composition、Dislikes 禁忌标签、Notes 备注；Save/Cancel 按钮
+   - 双人表单：选择 2 个已存在单人档案；双人风格 / 构图 / 禁忌标签；Save/Cancel
+   - 交互：保存后返回档案列表
+6. Shot Plan List【共用】
+   - 元素：+Create New Shot Plan；清单卡片（目的地、场景、关联档案）；卡片操作 Preview / Share / Delete
+   - 跳转：新建按钮→Shot Plan 创建向导；卡片 Preview→清单详情
+7. Shot Plan Wizard【共用，多步骤表单】
+   - Step1：目的地名称、场景单选（Beach/City/Forest/Cafe）、可选上传目的地参考图
+   - Step2：选择单人 / 双人档案
+   - Step3：Generate 按钮生成拍摄方案
+   - 交互：生成完成跳转到 Shot Plan 详情页
+8. Shot Plan Detail【共用】
+   - 元素：目的地标题 + 关联档案；3~5 组拍摄方案卡片（构图名称、线稿示意图、Pose 提示、Photographer Tip）；按钮 Save Offline / Generate Share Card / Back
+   - iOS 额外入口：Start Live AR Coach（进入 AR 取景页）
+9. Shared Card Manager【共用】
+   - 元素：所有已生成共享卡片列表；卡片信息：链接、复制链接、预览、撤销链接
+   - 跳转：预览 → 打开只读共享卡片网页
+10. Shared Card Public Page【Web Only，对外只读】
+   - 元素：标题 My Photo Preferences & Recommended Poses；人物偏好摘要；3 组推荐姿势构图；纯浏览，不可编辑
+11. Account & Subscription【共用】
+   - 元素：账户信息、订阅状态、Upgrade/Manage Subscription；云端同步开关（默认关闭）；一键删除全部档案；隐私政策、服务条款链接
+12. FAQ & Help【共用】
+
+### iOS App 独有页面
+
+13. AR Live Coach【iOS Only，核心全屏页面】
+   - 底层：全屏摄像头实时预览
+   - Overlay 分层：
+     - 顶部：Photographer Tips（拍摄者文字提示）
+     - 画面中央：半透明三分线 / 框架线、人体骨骼线框
+     - 底部：Subject Tips（被拍摄者文字提示）
+   - 悬浮控件：🔊语音开关、⏭️Next Pose、📸Open Native Camera、❌Exit
+   - 顶部警告横幅：暗光 / 遮挡提示
+   - 交互：Next Pose 切换姿势；Open Native Camera 暂停 AR，唤起系统相机；Exit 释放相机资源返回上一页
+14. Photo Review【iOS Only】
+   - 元素：导入照片预览、AI 构图姿态简短评价、Save feedback to profile（隐性反馈保存）
+15. Onboarding 新手引导【iOS Only，首次打开】
+   - 4 步：产品介绍、隐私承诺、相机权限说明、引导创建 Profile
+
+### 页面跳转总关系
+
+```
+Landing Page → Signup/Login → Dashboard
+Dashboard → Profiles List → Profile Edit
+Dashboard → Shot Plan List → Shot Plan Wizard → Shot Plan Detail
+Shot Plan Detail → [iOS Only] Start Live AR Coach
+Shot Plan Detail → Generate Shared Card → Shared Card Preview
+Dashboard → Account Page
+```
+
+---
+
+## 4. 权限、隐私合规（GDPR/CCPA）
+
+1. 相机权限（iOS）：仅用于本地端侧姿态识别；**原始摄像头图像不上传到服务器**；必须显式用户授权；用户可随时在系统设置关闭权限。
+2. 人物档案存储规则：默认本地存储；**云端同步必须用户手动开启开关 + 二次确认弹窗**；云端存储仅保存偏好标签文本，不存储人脸照片。
+3. 用户数据权利：账户页提供一键删除全部档案；删除请求 30 天内完成清理。
+4. 姿态关键点数据：仅本地用于姿势模板匹配；不会用于训练第三方通用模型。
+5. 姿势线稿素材：全部由签约摄影师授权，规避版权风险。
+
+## 5. 产品付费分层规则
+
+### Free Tier（免费）
+
+- 最多 1 个单人档案
+- Pre-shoot Planner：每日最多生成 1 套拍摄清单
+- iOS AR Live Coach：每日最多 3 次会话
+- 基础姿势模板库；不可生成共享卡片；无云端档案同步
+
+### Pro Tier（主力订阅）
+
+> 
+> $4.99 / 月｜$34.99 / 年，7 天免费试用
+> ✅ Free 全部额度上限解除
+> ✅ 最多 5 单人档案 + 2 双人档案
+> ✅ Pre-shoot Planner 无限制生成清单
+> ✅ iOS AR 实时指导无次数限制
+> ✅ 4 个基础场景模板包（Beach/City/Forest/Cafe）
+> ✅ 共享偏好卡片；用户主动开启云端档案同步
+> ✅ 全部语音 Coach 音色；隐性偏好学习
+
+> 
+> V1 暂不做一次性内购场景包，放到 V2 迭代。
+
+## 6. UI/UX 全局规范
+
+1. AR 文字提示高对比度；骨骼线、构图线低透明度半透明，不遮挡取景画面。
+2. AR 语音默认关闭；文字 AR 为默认模式。
+3. 文案克制，不承诺完美照片；描述为 guidance /assistant。
+4. 双角色信息分离：拍摄者提示放屏幕上方，被拍摄者提示放屏幕下方。
+
+## 7. 技术架构概要
+
+### Web Demo
+
+- Frontend：React，IndexedDB 本地存储
+- Backend：Node.js，标签模板匹配引擎（无实时大模型推理）
+- Payment：Stripe
+- Cloud Storage：PostgreSQL，加密存储用户偏好标签（用户主动开启同步才写入）
+
+### iOS App MVP
+
+- Camera：AVFoundation
+- Pose Estimation：MediaPipe / Apple Vision（端侧本地推理）
+- AR Overlay：SwiftUI
+- Local Storage：CoreData
+- IAP：App Store In-App Purchase
+- Pose Template Library：JSON 标签库（场景、身形、风格、禁忌标签）
+
+> 
+> 核心：**无实时云端大模型看图推理**。姿势推荐 = 标签检索 + 权重排序。大模型仅离线预生成姿势文案，提前存入模板库。
+
+## 8. 异常场景与错误处理
+
+1. 额度耗尽（Free 用户）：弹窗提示升级 Pro，不可继续生成清单 / AR 会话。
+2. 相机权限拒绝（iOS）：友好提示，无法进入 AR 页面。
+3. 暗光 / 遮挡导致姿态识别失效：顶部横幅提示，不强行渲染错乱骨骼。
+4. 档案达到数量上限：新建档案按钮置灰，提示升级订阅。
+5. 云端同步失败：提示本地数据不受影响，网络恢复重试。
+6. 订阅退款、试用到期：自动降级为 Free 套餐，档案保留，但额度限制生效。
+
+## 9. 埋点指标（仅采集行为指标，不采集人脸图像）
+
+1. 档案创建率：访客 → 创建人物档案
+2. Planner 使用率：创建档案后生成拍摄清单比例
+3. 试用转化率：7 天试用 → Pro 付费订阅
+4. 月订阅流失率 Churn
+5. iOS AR 会话完成率
+6. 共享卡片打开率，裂变新增用户占比
+
+## 10. 项目里程碑计划
+
+1. 阶段 1：Web Demo 开发（6~8 周），交付档案、Planner、Stripe 支付、共享卡片。投放 TikTok/IG 广告验证付费转化。
+2. 阶段 2：市场验证；如果转化达标，进入 iOS 开发；不达标，停止投入。
+3. 阶段 3：iOS MVP 开发（10~14 周）；Web 全部能力 + AR Live Coach + 相册复盘 + Onboarding。内部测试 + 种子用户测试。
+4. 阶段 4：App Store 上架，Product Hunt 首发；美国 + 澳洲上线，收集用户反馈迭代姿势库。
+5. 阶段 5：V2 迭代，增加 Style Trainer、高级场景包、PDF 导出。
+
+## 11. 风险清单 & 应对方案
+
+1. Web 广告引流付费转化率低：痛点仅娱乐性，付费意愿不足。应对：A/B 两套落地页，分别主打情侣旅行、订婚纪念日。
+2. iOS AR 识别鲁棒性差，暗光 / 遮挡容易失效引发差评。应对：设备分级，老 iPhone 自动降低 AI 帧率；增加环境检测提示。
+3. 订阅退款率高，用户忘记取消 7 天试用。应对：试用期间邮件自动提醒续费规则，产品文案清晰标注自动续费。
+4. 共享卡片裂变效果差。应对：卡片美化视觉，优化预览图，降低分享摩擦。
+5. 竞品快速复刻 AR 骨骼功能。应对：持续强化人物档案资产、Pre-shoot Planner 链路，不把 AR 骨骼作为唯一卖点。
+6. 大厂原生相机新增类似姿势辅助功能。应对：产品定位持续聚焦「人物偏好档案 + 旅行拍摄规划」，不和系统相机正面竞争。
+
+# 给 Cursor 的开发指令（你可以直接复制这一段放在 PRD 最前面）
+
+```
+你现在是全栈开发工程师，基于下面这份完整 FrameCoach V1.0 MVP PRD 进行开发。
+开发顺序：优先开发 Web Demo，不要直接开发iOS App。Web Demo 不包含摄像头AR功能。
+Web Demo 技术栈：React frontend + Node.js backend，本地存储使用 IndexedDB；支付接入 Stripe。
+严格遵守PRD内产品规则、隐私要求、权限逻辑。
+不要自行新增PRD中标记V2才做的功能。
+先输出项目目录结构，然后按页面顺序开发前端页面组件，再开发后端模板匹配引擎、账号订阅、Stripe支付、共享卡片功能。
+每完成一个模块，输出代码并简要说明实现要点。
+```

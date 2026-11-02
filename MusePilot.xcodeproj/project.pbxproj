@@ -1,0 +1,840 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+
+	};
+	objectVersion = 56;
+	objects = {
+		25CAD9764EE06767130BB3EA = {
+			isa = "PBXFileReference";
+			path = "AppContainer.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		A93E3E174AB9E7CE1B1311E0 = {
+			isa = "PBXBuildFile";
+			fileRef = "25CAD9764EE06767130BB3EA";
+		};
+		7F431E3588295E7661E8830C = {
+			isa = "PBXFileReference";
+			path = "MusePilotApp.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		22B8DE7C9521C2FE151339EE = {
+			isa = "PBXBuildFile";
+			fileRef = "7F431E3588295E7661E8830C";
+		};
+		DE7EB9FCEDEC41593342960B = {
+			isa = "PBXFileReference";
+			path = "PoseProCoordinator.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		CF4FB8D62BE2A6C705EA8ECD = {
+			isa = "PBXBuildFile";
+			fileRef = "DE7EB9FCEDEC41593342960B";
+		};
+		F659EACE3534FD46364186E7 = {
+			isa = "PBXFileReference";
+			path = "PoseProRootView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		226446EB27491389B176B473 = {
+			isa = "PBXBuildFile";
+			fileRef = "F659EACE3534FD46364186E7";
+		};
+		0CCB1DB89E9FDE2A3DD1E93A = {
+			isa = "PBXGroup";
+			children = ("25CAD9764EE06767130BB3EA", "7F431E3588295E7661E8830C", "DE7EB9FCEDEC41593342960B", "F659EACE3534FD46364186E7",);
+			path = "App";
+			sourceTree = "<group>";
+		};
+		4136EE3016017239B1F46EE3 = {
+			isa = "PBXFileReference";
+			path = "MPBadge.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		2251911438208D9A9D73C4E5 = {
+			isa = "PBXBuildFile";
+			fileRef = "4136EE3016017239B1F46EE3";
+		};
+		A8E6A4948DF6AC4FCCAA427E = {
+			isa = "PBXFileReference";
+			path = "MPButton.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		0EBB5B70F16A10F3E914C5A5 = {
+			isa = "PBXBuildFile";
+			fileRef = "A8E6A4948DF6AC4FCCAA427E";
+		};
+		30F5D7C1F63F9AC955E8D46D = {
+			isa = "PBXFileReference";
+			path = "MPCard.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		B1E17E64E62C86E2D6A42B55 = {
+			isa = "PBXBuildFile";
+			fileRef = "30F5D7C1F63F9AC955E8D46D";
+		};
+		AA1C95AAB98867EFE730EEE6 = {
+			isa = "PBXFileReference";
+			path = "MPTopBar.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		E99FA6AADE1E61EF18C4B1EA = {
+			isa = "PBXBuildFile";
+			fileRef = "AA1C95AAB98867EFE730EEE6";
+		};
+		E078C5DEE3FF2C11251B584B = {
+			isa = "PBXFileReference";
+			path = "NativeCameraPreview.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		C6E4292D2900C861B0CDF54D = {
+			isa = "PBXBuildFile";
+			fileRef = "E078C5DEE3FF2C11251B584B";
+		};
+		BA3B7A3A029FAE16F10A6330 = {
+			isa = "PBXGroup";
+			children = ("4136EE3016017239B1F46EE3", "A8E6A4948DF6AC4FCCAA427E", "30F5D7C1F63F9AC955E8D46D", "AA1C95AAB98867EFE730EEE6", "E078C5DEE3FF2C11251B584B",);
+			path = "Components";
+			sourceTree = "<group>";
+		};
+		D5050C70B53DFBEC7CFB946B = {
+			isa = "PBXFileReference";
+			path = "MPColor.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		602307335E72272239C44696 = {
+			isa = "PBXBuildFile";
+			fileRef = "D5050C70B53DFBEC7CFB946B";
+		};
+		A17901F19C5BFCC72EF122FD = {
+			isa = "PBXFileReference";
+			path = "MPRadius.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		8A2188EF0446D3B08376F65A = {
+			isa = "PBXBuildFile";
+			fileRef = "A17901F19C5BFCC72EF122FD";
+		};
+		145970A90901F1DAF892599B = {
+			isa = "PBXFileReference";
+			path = "MPSpacing.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		BA671366A8B305E8B9AAF9DF = {
+			isa = "PBXBuildFile";
+			fileRef = "145970A90901F1DAF892599B";
+		};
+		E1FE3269021A78478B5C1CD4 = {
+			isa = "PBXFileReference";
+			path = "MPTypography.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		1396CDF2BDAA37107B6656AD = {
+			isa = "PBXBuildFile";
+			fileRef = "E1FE3269021A78478B5C1CD4";
+		};
+		B380225B7A7BEA90F53646EB = {
+			isa = "PBXGroup";
+			children = ("D5050C70B53DFBEC7CFB946B", "A17901F19C5BFCC72EF122FD", "145970A90901F1DAF892599B", "E1FE3269021A78478B5C1CD4",);
+			path = "DesignSystem";
+			sourceTree = "<group>";
+		};
+		728F043F0F4CC10F77BBB477 = {
+			isa = "PBXFileReference";
+			path = "NavigationCoordinator.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		28A108673394727B91E7538D = {
+			isa = "PBXBuildFile";
+			fileRef = "728F043F0F4CC10F77BBB477";
+		};
+		84EF0C1D38C23375199A102F = {
+			isa = "PBXFileReference";
+			path = "Route.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		9F39C756C12B2555C1F2DFBA = {
+			isa = "PBXBuildFile";
+			fileRef = "84EF0C1D38C23375199A102F";
+		};
+		155D16AC121BC3B812877178 = {
+			isa = "PBXGroup";
+			children = ("728F043F0F4CC10F77BBB477", "84EF0C1D38C23375199A102F",);
+			path = "Navigation";
+			sourceTree = "<group>";
+		};
+		621281E6CD8D41501E045011 = {
+			isa = "PBXGroup";
+			children = ("BA3B7A3A029FAE16F10A6330", "B380225B7A7BEA90F53646EB", "155D16AC121BC3B812877178",);
+			path = "Core";
+			sourceTree = "<group>";
+		};
+		D504B0850881A3779E03B5FA = {
+			isa = "PBXFileReference";
+			path = "Models.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		D96DA53899C821EFA40A4725 = {
+			isa = "PBXBuildFile";
+			fileRef = "D504B0850881A3779E03B5FA";
+		};
+		907DA0586B31E5A8C3373278 = {
+			isa = "PBXFileReference";
+			path = "GuidancePolicy.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		08F61F9CD0B8EEC9BEE9FDDB = {
+			isa = "PBXBuildFile";
+			fileRef = "907DA0586B31E5A8C3373278";
+		};
+		8F8EB8D8BBFD3C4C72D125FE = {
+			isa = "PBXFileReference";
+			path = "ShotRecipe.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		311CBDAD15921853DB3C94A2 = {
+			isa = "PBXBuildFile";
+			fileRef = "8F8EB8D8BBFD3C4C72D125FE";
+		};
+		13DAEE70C2D1CE2B89B275A8 = {
+			isa = "PBXGroup";
+			children = ("907DA0586B31E5A8C3373278", "8F8EB8D8BBFD3C4C72D125FE",);
+			path = "P0A";
+			sourceTree = "<group>";
+		};
+		648E5F79A0062ACD5FACBE7C = {
+			isa = "PBXGroup";
+			children = ("D504B0850881A3779E03B5FA", "13DAEE70C2D1CE2B89B275A8",);
+			path = "Domain";
+			sourceTree = "<group>";
+		};
+		7E3517DA12D75B8A72CEA3C2 = {
+			isa = "PBXFileReference";
+			path = "CameraView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		6C61D49FFEA8A0BADABEB4F2 = {
+			isa = "PBXBuildFile";
+			fileRef = "7E3517DA12D75B8A72CEA3C2";
+		};
+		CDAF325FFAD0DD22BD7F1B11 = {
+			isa = "PBXGroup";
+			children = ("7E3517DA12D75B8A72CEA3C2",);
+			path = "Camera";
+			sourceTree = "<group>";
+		};
+		9DC9509AB5E95E174A3A4A26 = {
+			isa = "PBXFileReference";
+			path = "CaptureViewModel.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		E0278315C48D15993DAC7186 = {
+			isa = "PBXBuildFile";
+			fileRef = "9DC9509AB5E95E174A3A4A26";
+		};
+		FC4022BD80E582F7554D1378 = {
+			isa = "PBXFileReference";
+			path = "NativeCaptureView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		303F9BBAF45B56535369A3A0 = {
+			isa = "PBXBuildFile";
+			fileRef = "FC4022BD80E582F7554D1378";
+		};
+		2E57C62D8827698874144B3D = {
+			isa = "PBXGroup";
+			children = ("9DC9509AB5E95E174A3A4A26", "FC4022BD80E582F7554D1378",);
+			path = "Capture";
+			sourceTree = "<group>";
+		};
+		F3B27570F9F6E543C8033FDF = {
+			isa = "PBXFileReference";
+			path = "LaunchView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		D70971A269C3CEB86C1FD685 = {
+			isa = "PBXBuildFile";
+			fileRef = "F3B27570F9F6E543C8033FDF";
+		};
+		A88F4F96392C0E1B6178DD40 = {
+			isa = "PBXGroup";
+			children = ("F3B27570F9F6E543C8033FDF",);
+			path = "Launch";
+			sourceTree = "<group>";
+		};
+		5AC3EC47E9AB0FF2EB2233C1 = {
+			isa = "PBXFileReference";
+			path = "NativeMeView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		7EE36D6789DC988DBCE9B5B4 = {
+			isa = "PBXBuildFile";
+			fileRef = "5AC3EC47E9AB0FF2EB2233C1";
+		};
+		C95156C71209BE779E650B13 = {
+			isa = "PBXGroup";
+			children = ("5AC3EC47E9AB0FF2EB2233C1",);
+			path = "Me";
+			sourceTree = "<group>";
+		};
+		52ADA09913CA3B3D2659F509 = {
+			isa = "PBXFileReference";
+			path = "NativePhotoView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		1960D0295297BCA0B2F9CFB0 = {
+			isa = "PBXBuildFile";
+			fileRef = "52ADA09913CA3B3D2659F509";
+		};
+		F25CF7F9D55CBCC3A349FEC7 = {
+			isa = "PBXFileReference";
+			path = "NativePhotoViewModel.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		1A44FFD9605BD1ED14CA95E3 = {
+			isa = "PBXBuildFile";
+			fileRef = "F25CF7F9D55CBCC3A349FEC7";
+		};
+		BADE9ED7FB9E73680E63AF15 = {
+			isa = "PBXGroup";
+			children = ("52ADA09913CA3B3D2659F509", "F25CF7F9D55CBCC3A349FEC7",);
+			path = "Photo";
+			sourceTree = "<group>";
+		};
+		4FED7209FE057047FE92B5E6 = {
+			isa = "PBXFileReference";
+			path = "PrivacyView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		84B03B0C1B285689545CD875 = {
+			isa = "PBXBuildFile";
+			fileRef = "4FED7209FE057047FE92B5E6";
+		};
+		67174A71CE794384D8E5E4CD = {
+			isa = "PBXGroup";
+			children = ("4FED7209FE057047FE92B5E6",);
+			path = "Privacy";
+			sourceTree = "<group>";
+		};
+		C000A3E4ED24930D2F3408E1 = {
+			isa = "PBXFileReference";
+			path = "PurchaseView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		E1C4EAEC73CAD07EAE586053 = {
+			isa = "PBXBuildFile";
+			fileRef = "C000A3E4ED24930D2F3408E1";
+		};
+		986CD4F924FC2BE043AE27C7 = {
+			isa = "PBXGroup";
+			children = ("C000A3E4ED24930D2F3408E1",);
+			path = "Purchase";
+			sourceTree = "<group>";
+		};
+		7F7093515A48994C35910990 = {
+			isa = "PBXFileReference";
+			path = "ResultView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		CD4286BB0990A88FA131AFEB = {
+			isa = "PBXBuildFile";
+			fileRef = "7F7093515A48994C35910990";
+		};
+		77AE385E80E83844DD546D12 = {
+			isa = "PBXGroup";
+			children = ("7F7093515A48994C35910990",);
+			path = "Result";
+			sourceTree = "<group>";
+		};
+		9CC1AE19D2E40084D4E63AFE = {
+			isa = "PBXFileReference";
+			path = "SessionView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		B99F6D57AA9F6C768EDBD9D3 = {
+			isa = "PBXBuildFile";
+			fileRef = "9CC1AE19D2E40084D4E63AFE";
+		};
+		EB28F3D564C0866E46DF94CC = {
+			isa = "PBXGroup";
+			children = ("9CC1AE19D2E40084D4E63AFE",);
+			path = "Session";
+			sourceTree = "<group>";
+		};
+		A2377D16ED20D2C3262314CE = {
+			isa = "PBXFileReference";
+			path = "NativeSettingsView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		356D34F96F4904928A765701 = {
+			isa = "PBXBuildFile";
+			fileRef = "A2377D16ED20D2C3262314CE";
+		};
+		266B9228FA4013ADC32FA9DD = {
+			isa = "PBXFileReference";
+			path = "SettingsView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		A63A01C56410CEF6145B2DA0 = {
+			isa = "PBXBuildFile";
+			fileRef = "266B9228FA4013ADC32FA9DD";
+		};
+		2B352EA1C52F509B55591C15 = {
+			isa = "PBXGroup";
+			children = ("A2377D16ED20D2C3262314CE", "266B9228FA4013ADC32FA9DD",);
+			path = "Settings";
+			sourceTree = "<group>";
+		};
+		9608078D75CC3B7FAFB8521B = {
+			isa = "PBXFileReference";
+			path = "ShotPlanView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		CC32341DAB11BEAD80AFF40A = {
+			isa = "PBXBuildFile";
+			fileRef = "9608078D75CC3B7FAFB8521B";
+		};
+		82CF523D8F34854E95E312BD = {
+			isa = "PBXGroup";
+			children = ("9608078D75CC3B7FAFB8521B",);
+			path = "ShotPlan";
+			sourceTree = "<group>";
+		};
+		E32C7469D9ACB85BC906FD30 = {
+			isa = "PBXFileReference";
+			path = "StyleView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		CF520AFDABAF4019CBBD5B28 = {
+			isa = "PBXBuildFile";
+			fileRef = "E32C7469D9ACB85BC906FD30";
+		};
+		E111D68E9FCAE91C77D6B6D6 = {
+			isa = "PBXGroup";
+			children = ("E32C7469D9ACB85BC906FD30",);
+			path = "Style";
+			sourceTree = "<group>";
+		};
+		E40BC3D99878B3F6B5A744B3 = {
+			isa = "PBXFileReference";
+			path = "NativeTemplatesView.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		3CF677D998A04F742B3398BD = {
+			isa = "PBXBuildFile";
+			fileRef = "E40BC3D99878B3F6B5A744B3";
+		};
+		395FFDAABD4E7F312244558E = {
+			isa = "PBXGroup";
+			children = ("E40BC3D99878B3F6B5A744B3",);
+			path = "Templates";
+			sourceTree = "<group>";
+		};
+		848097A780B76E957E6E3817 = {
+			isa = "PBXGroup";
+			children = ("CDAF325FFAD0DD22BD7F1B11", "2E57C62D8827698874144B3D", "A88F4F96392C0E1B6178DD40", "C95156C71209BE779E650B13", "BADE9ED7FB9E73680E63AF15", "67174A71CE794384D8E5E4CD", "986CD4F924FC2BE043AE27C7", "77AE385E80E83844DD546D12", "EB28F3D564C0866E46DF94CC", "2B352EA1C52F509B55591C15", "82CF523D8F34854E95E312BD", "E111D68E9FCAE91C77D6B6D6", "395FFDAABD4E7F312244558E",);
+			path = "Features";
+			sourceTree = "<group>";
+		};
+		818B51A3D6756EC41F65FADA = {
+			isa = "PBXFileReference";
+			path = "PrivacyInfo.xcprivacy";
+			lastKnownFileType = "text.xml";
+			sourceTree = "<group>";
+		};
+		D3FA1A4BBD591545E4FF0221 = {
+			isa = "PBXBuildFile";
+			fileRef = "818B51A3D6756EC41F65FADA";
+		};
+		BAE7214FB79DD8A4D7864787 = {
+			isa = "PBXGroup";
+			children = ("818B51A3D6756EC41F65FADA",);
+			path = "Resources";
+			sourceTree = "<group>";
+		};
+		6F3D8BE418A4C8E2F7B22622 = {
+			isa = "PBXFileReference";
+			path = "NativeCameraModels.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		12C62DFAC02B719C876A1A3E = {
+			isa = "PBXBuildFile";
+			fileRef = "6F3D8BE418A4C8E2F7B22622";
+		};
+		3F350A1E8B1D99E15B39BEA2 = {
+			isa = "PBXFileReference";
+			path = "NativeCameraService.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		C2D334FAB12433458E17854F = {
+			isa = "PBXBuildFile";
+			fileRef = "3F350A1E8B1D99E15B39BEA2";
+		};
+		1601998733048E3201E3AAF2 = {
+			isa = "PBXFileReference";
+			path = "NativePoseFrameProcessor.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		1C8D6D5EB28F7C1E7E042C26 = {
+			isa = "PBXBuildFile";
+			fileRef = "1601998733048E3201E3AAF2";
+		};
+		F939DF1BACC05655E4B2AC89 = {
+			isa = "PBXGroup";
+			children = ("6F3D8BE418A4C8E2F7B22622", "3F350A1E8B1D99E15B39BEA2", "1601998733048E3201E3AAF2",);
+			path = "Capture";
+			sourceTree = "<group>";
+		};
+		A47AAB68736CACC59C5459E0 = {
+			isa = "PBXFileReference";
+			path = "LocalLibraryStore.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		62902D2AD279D914BAE7F134 = {
+			isa = "PBXBuildFile";
+			fileRef = "A47AAB68736CACC59C5459E0";
+		};
+		446CD07D525C55FE5D2AEC05 = {
+			isa = "PBXGroup";
+			children = ("A47AAB68736CACC59C5459E0",);
+			path = "Library";
+			sourceTree = "<group>";
+		};
+		C0616763915AE74A5BCC3006 = {
+			isa = "PBXFileReference";
+			path = "PhotoOutputService.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		348D009F292BE24975941BE3 = {
+			isa = "PBXBuildFile";
+			fileRef = "C0616763915AE74A5BCC3006";
+		};
+		F9AA810C6B6119C6E5D2C298 = {
+			isa = "PBXGroup";
+			children = ("C0616763915AE74A5BCC3006",);
+			path = "Photos";
+			sourceTree = "<group>";
+		};
+		E505F2A7685DB27800DD72CC = {
+			isa = "PBXFileReference";
+			path = "StyleService.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		13B33D54B4516B5C5359CC99 = {
+			isa = "PBXBuildFile";
+			fileRef = "E505F2A7685DB27800DD72CC";
+		};
+		6FA1AE6EF9A367C0940E05C6 = {
+			isa = "PBXGroup";
+			children = ("F939DF1BACC05655E4B2AC89", "446CD07D525C55FE5D2AEC05", "F9AA810C6B6119C6E5D2C298", "E505F2A7685DB27800DD72CC",);
+			path = "Services";
+			sourceTree = "<group>";
+		};
+		7819E1D225982744572381B5 = {
+			isa = "PBXGroup";
+			children = ("0CCB1DB89E9FDE2A3DD1E93A", "621281E6CD8D41501E045011", "648E5F79A0062ACD5FACBE7C", "848097A780B76E957E6E3817", "BAE7214FB79DD8A4D7864787", "6FA1AE6EF9A367C0940E05C6",);
+			path = "MusePilot";
+			sourceTree = "<group>";
+		};
+		734C5560243048F92300ADC6 = {
+			isa = "PBXFileReference";
+			path = "GuidancePolicyTests.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		2436557FBAA715DF11F8E3AC = {
+			isa = "PBXBuildFile";
+			fileRef = "734C5560243048F92300ADC6";
+		};
+		A52436B4704C119885209A0F = {
+			isa = "PBXFileReference";
+			path = "LocalLibraryStoreTests.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		3F121B51312E8DACC5A63EA7 = {
+			isa = "PBXBuildFile";
+			fileRef = "A52436B4704C119885209A0F";
+		};
+		5F3E518939FF41EB3F1750A6 = {
+			isa = "PBXFileReference";
+			path = "PhotoPipelineTests.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		635AC8D277677AF9F8FD88AA = {
+			isa = "PBXBuildFile";
+			fileRef = "5F3E518939FF41EB3F1750A6";
+		};
+		11C622458E3AED303E33E1C7 = {
+			isa = "PBXFileReference";
+			path = "RecipeTests.swift";
+			lastKnownFileType = "sourcecode.swift";
+			sourceTree = "<group>";
+		};
+		3A72064B1D575D439EC7165A = {
+			isa = "PBXBuildFile";
+			fileRef = "11C622458E3AED303E33E1C7";
+		};
+		E43443D73DF8008F9EEBDBCF = {
+			isa = "PBXGroup";
+			children = ("734C5560243048F92300ADC6", "A52436B4704C119885209A0F", "5F3E518939FF41EB3F1750A6", "11C622458E3AED303E33E1C7",);
+			path = "MusePilotTests";
+			sourceTree = "<group>";
+		};
+		B6CDB6E5D160E013280D3C68 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			path = "MusePilot.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		E02A90D9643568EA39115CFB = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			path = "MusePilotTests.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		00C45FD35CB0F9C5F764F070 = {
+			isa = "PBXGroup";
+			name = "Products";
+			sourceTree = "<group>";
+			children = ("B6CDB6E5D160E013280D3C68", "E02A90D9643568EA39115CFB",);
+		};
+		ADCF10F76EBF2A74473E9DC4 = {
+			isa = "PBXGroup";
+			sourceTree = "<group>";
+			children = ("7819E1D225982744572381B5", "E43443D73DF8008F9EEBDBCF", "00C45FD35CB0F9C5F764F070",);
+		};
+		D10ECEDA0FB53BA093BEC557 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("A93E3E174AB9E7CE1B1311E0", "22B8DE7C9521C2FE151339EE", "CF4FB8D62BE2A6C705EA8ECD", "226446EB27491389B176B473", "2251911438208D9A9D73C4E5", "0EBB5B70F16A10F3E914C5A5", "B1E17E64E62C86E2D6A42B55", "E99FA6AADE1E61EF18C4B1EA", "C6E4292D2900C861B0CDF54D", "602307335E72272239C44696", "8A2188EF0446D3B08376F65A", "BA671366A8B305E8B9AAF9DF", "1396CDF2BDAA37107B6656AD", "28A108673394727B91E7538D", "9F39C756C12B2555C1F2DFBA", "D96DA53899C821EFA40A4725", "08F61F9CD0B8EEC9BEE9FDDB", "311CBDAD15921853DB3C94A2", "6C61D49FFEA8A0BADABEB4F2", "E0278315C48D15993DAC7186", "303F9BBAF45B56535369A3A0", "D70971A269C3CEB86C1FD685", "7EE36D6789DC988DBCE9B5B4", "1960D0295297BCA0B2F9CFB0", "1A44FFD9605BD1ED14CA95E3", "84B03B0C1B285689545CD875", "E1C4EAEC73CAD07EAE586053", "CD4286BB0990A88FA131AFEB", "B99F6D57AA9F6C768EDBD9D3", "356D34F96F4904928A765701", "A63A01C56410CEF6145B2DA0", "CC32341DAB11BEAD80AFF40A", "CF520AFDABAF4019CBBD5B28", "3CF677D998A04F742B3398BD", "12C62DFAC02B719C876A1A3E", "C2D334FAB12433458E17854F", "1C8D6D5EB28F7C1E7E042C26", "62902D2AD279D914BAE7F134", "348D009F292BE24975941BE3", "13B33D54B4516B5C5359CC99",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19A4328C9961E8F8A7CF4CD = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84B5C31679C986BFD935BC6 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("D3FA1A4BBD591545E4FF0221",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3769782B7F5220F0E0D205 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("2436557FBAA715DF11F8E3AC", "3F121B51312E8DACC5A63EA7", "635AC8D277677AF9F8FD88AA", "3A72064B1D575D439EC7165A",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F194C20A28A320F4CB82888 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7877D440DA22A092CDF8D79A = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877A6BA951A2EA0025A2ABE8 = {
+			isa = "XCBuildConfiguration";
+			name = "Debug";
+			buildSettings = {
+				SWIFT_VERSION = "6.0";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				SDKROOT = "iphoneos";
+				CLANG_ENABLE_MODULES = "YES";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				TARGETED_DEVICE_FAMILY = "1";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				ENABLE_TESTABILITY = "YES";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+			};
+		};
+		959134B361DD7E21ADEA3164 = {
+			isa = "XCBuildConfiguration";
+			name = "Release";
+			buildSettings = {
+				SWIFT_VERSION = "6.0";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				SDKROOT = "iphoneos";
+				CLANG_ENABLE_MODULES = "YES";
+				SWIFT_STRICT_CONCURRENCY = "complete";
+				TARGETED_DEVICE_FAMILY = "1";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_COMPILATION_MODE = "wholemodule";
+			};
+		};
+		F960DB182D53C4ECD26546AA = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("877A6BA951A2EA0025A2ABE8", "959134B361DD7E21ADEA3164",);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		3CF6A4F2E05B3AAE7E2CBFEE = {
+			isa = "XCBuildConfiguration";
+			name = "Debug";
+			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = "com.musepilot.app";
+				PRODUCT_NAME = "MusePilot";
+				PRODUCT_MODULE_NAME = "MusePilot";
+				GENERATE_INFOPLIST_FILE = "YES";
+				INFOPLIST_KEY_CFBundleDisplayName = "PosePro";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use your camera for portraits and on-device framing guidance.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save the photos you choose to your Photos library.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = "YES";
+				INFOPLIST_KEY_UILaunchScreen_Generation = "YES";
+			};
+		};
+		23FB2CAEB38545C3793097DD = {
+			isa = "XCBuildConfiguration";
+			name = "Release";
+			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = "com.musepilot.app";
+				PRODUCT_NAME = "MusePilot";
+				PRODUCT_MODULE_NAME = "MusePilot";
+				GENERATE_INFOPLIST_FILE = "YES";
+				INFOPLIST_KEY_CFBundleDisplayName = "PosePro";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use your camera for portraits and on-device framing guidance.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save the photos you choose to your Photos library.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = "YES";
+				INFOPLIST_KEY_UILaunchScreen_Generation = "YES";
+			};
+		};
+		F7144F68C3B4FE8B23CB38FE = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("3CF6A4F2E05B3AAE7E2CBFEE", "23FB2CAEB38545C3793097DD",);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		29C7B681C8D62CBAC94D51C0 = {
+			isa = "PBXNativeTarget";
+			name = "MusePilot";
+			productName = "MusePilot";
+			productReference = "B6CDB6E5D160E013280D3C68";
+			productType = "com.apple.product-type.application";
+			buildConfigurationList = "F7144F68C3B4FE8B23CB38FE";
+			buildPhases = ("D10ECEDA0FB53BA093BEC557", "C19A4328C9961E8F8A7CF4CD", "C84B5C31679C986BFD935BC6",);
+			buildRules = ();
+			dependencies = ();
+		};
+		D36D33020B6BB89396BD1B34 = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "98F54143AB4E86B28C3AFEE0";
+			proxyType = 1;
+			remoteGlobalIDString = "29C7B681C8D62CBAC94D51C0";
+			remoteInfo = "MusePilot";
+		};
+		D2F9C6ACC3CFD758A2AF1D96 = {
+			isa = "PBXTargetDependency";
+			target = "29C7B681C8D62CBAC94D51C0";
+			targetProxy = "D36D33020B6BB89396BD1B34";
+		};
+		E2657B9FA91DD4A55652006F = {
+			isa = "XCBuildConfiguration";
+			name = "Debug";
+			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = "com.musepilot.app.tests";
+				PRODUCT_NAME = "MusePilotTests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusePilot.app/MusePilot";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+			};
+		};
+		B4343C19535B18410503AED7 = {
+			isa = "XCBuildConfiguration";
+			name = "Release";
+			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = "com.musepilot.app.tests";
+				PRODUCT_NAME = "MusePilotTests";
+				GENERATE_INFOPLIST_FILE = "YES";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusePilot.app/MusePilot";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+			};
+		};
+		D8118E43E3270746B74517F8 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("E2657B9FA91DD4A55652006F", "B4343C19535B18410503AED7",);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		7EC8F98B7A265120217712DE = {
+			isa = "PBXNativeTarget";
+			name = "MusePilotTests";
+			productName = "MusePilotTests";
+			productReference = "E02A90D9643568EA39115CFB";
+			productType = "com.apple.product-type.bundle.unit-test";
+			buildConfigurationList = "D8118E43E3270746B74517F8";
+			buildPhases = ("FE3769782B7F5220F0E0D205", "0F194C20A28A320F4CB82888", "7877D440DA22A092CDF8D79A",);
+			buildRules = ();
+			dependencies = ("D2F9C6ACC3CFD758A2AF1D96",);
+		};
+		98F54143AB4E86B28C3AFEE0 = {
+			isa = "PBXProject";
+			attributes = {
+				LastUpgradeCheck = "1600";
+			};
+			buildConfigurationList = "F960DB182D53C4ECD26546AA";
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "en";
+			knownRegions = ("en", "Base",);
+			mainGroup = "ADCF10F76EBF2A74473E9DC4";
+			productRefGroup = "00C45FD35CB0F9C5F764F070";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = ("29C7B681C8D62CBAC94D51C0", "7EC8F98B7A265120217712DE",);
+		};
+	};
+	rootObject = "98F54143AB4E86B28C3AFEE0";
+}

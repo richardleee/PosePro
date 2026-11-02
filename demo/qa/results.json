@@ -1,0 +1,202 @@
+{
+  "started_at": "2026-10-15T13:25:43.986632+00:00",
+  "scope": "Real Chrome interaction tests; sample camera only; no real payment or Photos APIs",
+  "tests": [
+    {
+      "name": "layout_320",
+      "evidence": {
+        "viewport": 320,
+        "documentWidth": 320,
+        "bodyWidth": 320,
+        "deviceWidth": 320,
+        "viewClient": 320,
+        "viewScroll": 320,
+        "imagesLoaded": true
+      },
+      "status": "passed",
+      "seconds": 0.69
+    },
+    {
+      "name": "layout_393",
+      "evidence": {
+        "viewport": 393,
+        "documentWidth": 393,
+        "bodyWidth": 393,
+        "deviceWidth": 393,
+        "viewClient": 393,
+        "viewScroll": 393,
+        "imagesLoaded": true
+      },
+      "status": "passed",
+      "seconds": 0.65
+    },
+    {
+      "name": "layout_430",
+      "evidence": {
+        "viewport": 430,
+        "documentWidth": 430,
+        "bodyWidth": 430,
+        "deviceWidth": 430,
+        "viewClient": 430,
+        "viewScroll": 430,
+        "imagesLoaded": true
+      },
+      "status": "passed",
+      "seconds": 0.66
+    },
+    {
+      "name": "layout_1440",
+      "evidence": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "deviceWidth": 408,
+        "viewClient": 394,
+        "viewScroll": 394,
+        "imagesLoaded": true
+      },
+      "status": "passed",
+      "seconds": 0.76
+    },
+    {
+      "name": "keep_favorite_reset_delete",
+      "evidence": {
+        "cancelled_capture_sessions": 0,
+        "keep_weight": 1,
+        "favorite_total_weight": 3,
+        "metadata_without_thumbnails": true,
+        "reload_persisted": true,
+        "reset_retained_sessions": 1,
+        "delete_requires_exact_DELETE": true
+      },
+      "status": "passed",
+      "seconds": 9.82
+    },
+    {
+      "name": "pro_paywall_pending_selection",
+      "evidence": {
+        "monthly": 6.99,
+        "annual": 29.99,
+        "trial_days": 7,
+        "cancel_preserves_choice": true,
+        "pending_look_restored": true,
+        "real_payment": false
+      },
+      "status": "passed",
+      "seconds": 1.69
+    },
+    {
+      "name": "coach_pause_role_lowlight_save_retake_discard",
+      "evidence": {
+        "pause_freezes_guidance": true,
+        "outline_hidden_when_paused_or_degraded": true,
+        "role_changes_copy": true,
+        "lowlight_blocks_capture": true,
+        "save_denial_recoverable": true,
+        "retake_preserves_role": true,
+        "discard_no_style_or_session": true
+      },
+      "status": "passed",
+      "seconds": 14.07
+    },
+    {
+      "name": "camera_permission_and_offline",
+      "evidence": {
+        "camera_denial_preserves_plan": true,
+        "offline_navigation_and_coaching": true,
+        "remote_resource_requests": 0
+      },
+      "status": "passed",
+      "seconds": 3.63
+    },
+    {
+      "name": "corrupt_and_full_storage",
+      "evidence": {
+        "corrupt_record_preserved_until_confirmation": true,
+        "quota_failure_feedback": true,
+        "in_memory_use_continues": true
+      },
+      "status": "passed",
+      "seconds": 1.23
+    },
+    {
+      "name": "file_protocol_core_flow",
+      "evidence": {
+        "url": "file:///E:/workspace/FramePhotoCoach/demo/index.html",
+        "core_flow_and_reload_persistence": true
+      },
+      "status": "passed",
+      "seconds": 7.73
+    },
+    {
+      "name": "pending_camera_cancel_and_late_resolution",
+      "evidence": {
+        "escapes": [
+          {
+            "escape": "close-modal",
+            "late_track_stopped": true,
+            "no_live_takeover": true
+          },
+          {
+            "escape": "sample-camera",
+            "late_track_stopped": true,
+            "no_live_takeover": true
+          }
+        ],
+        "real_camera_requested": false
+      },
+      "status": "passed",
+      "seconds": 1.35
+    },
+    {
+      "name": "paused_role_change_requires_resume",
+      "evidence": {
+        "role_change_preserves_pause": true,
+        "no_speech_or_next_step_until_resume": true,
+        "resume_uses_new_role": true
+      },
+      "status": "passed",
+      "seconds": 2.5
+    },
+    {
+      "name": "paywall_preserves_selected_option_focus",
+      "evidence": {
+        "monthly_focus_retained": true,
+        "annual_focus_retained": true,
+        "modal_keyboard_focus_trapped": true
+      },
+      "status": "passed",
+      "seconds": 0.88
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "http_errors": [],
+  "remote_requests": [],
+  "request_failures": [],
+  "url": "http://127.0.0.1:4173",
+  "source_hashes_before": {
+    "index.html": "10a8b30a7a7e9efeeb49995e1a3916cece0debc0f488d3cfd05a68a58c9fc55c",
+    "styles.css": "260ec3ff9406c91a0c6df9e9eff67dcdb4edf6c0c5bf4c588ef5d9799efb1ccc",
+    "app.js": "f10e83a0c59fd8c26edd0d76915b4ebacb1f07f849578c17aad9e87138bb37a1",
+    "model.js": "648954eca7db62266d17809613569c2b9bad89b34bb3b1fd2dd02e1fc603f398"
+  },
+  "browser_version": "155.0.8059.40",
+  "source_hashes_after": {
+    "index.html": "10a8b30a7a7e9efeeb49995e1a3916cece0debc0f488d3cfd05a68a58c9fc55c",
+    "styles.css": "260ec3ff9406c91a0c6df9e9eff67dcdb4edf6c0c5bf4c588ef5d9799efb1ccc",
+    "app.js": "f10e83a0c59fd8c26edd0d76915b4ebacb1f07f849578c17aad9e87138bb37a1",
+    "model.js": "648954eca7db62266d17809613569c2b9bad89b34bb3b1fd2dd02e1fc603f398"
+  },
+  "source_changed_during_run": false,
+  "finished_at": "2026-10-15T13:26:30.748383+00:00",
+  "summary": {
+    "passed": 13,
+    "failed": 0,
+    "console_errors": 0,
+    "page_errors": 0,
+    "http_errors": 0,
+    "remote_requests": 0
+  },
+  "passed": true
+}

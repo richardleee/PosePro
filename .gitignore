@@ -1,0 +1,39 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Local editor, assistant and operating system state
+.idea/
+.vscode/
+.agents/
+.codex/
+.codegraph/
+Thumbs.db
+Desktop.ini
+
+# Xcode user state and build products
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+*.ipa
+*.dSYM/
+
+# Signing materials and local credentials
+*.p12
+*.pfx
+*.mobileprovision
+*.pem
+*.key
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Unpacked duplicate deliveries and local document bundles
+/PosePro_Demo/
+/docs.zip

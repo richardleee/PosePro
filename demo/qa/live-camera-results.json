@@ -1,0 +1,48 @@
+{
+  "started_at": "2026-10-15T13:26:26.776457+00:00",
+  "url": "http://127.0.0.1:4173",
+  "scope": "Chromium synthetic video stream only; fake-device and fake-permission flags; no real camera hardware or iOS Photos API",
+  "checks": [
+    {
+      "name": "synthetic_live_preview",
+      "passed": true,
+      "dimensions": {
+        "width": 1280,
+        "height": 1920
+      }
+    },
+    {
+      "name": "live_result_and_download",
+      "passed": true,
+      "preview_scheme": "blob:",
+      "suggested_filename": "MusePilot-cafe-2026-10-15.jpg",
+      "download_bytes": 20441,
+      "jpeg_header_valid": true
+    },
+    {
+      "name": "retake_releases_preview_and_does_not_commit",
+      "passed": true
+    },
+    {
+      "name": "live_keep_persists_metadata_only",
+      "passed": true,
+      "photo_reference": "live-session",
+      "sessions": 1,
+      "thumbnail_permission": "denied"
+    },
+    {
+      "name": "reload_keeps_metadata_without_broken_live_image",
+      "passed": true,
+      "thumbnail_permission_still_granted": true,
+      "broken_images": 0
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "http_errors": [],
+  "remote_requests": [],
+  "browser_version": "155.0.8059.40",
+  "passed": true,
+  "seconds": 15.58,
+  "finished_at": "2026-10-15T13:26:42.358768+00:00"
+}

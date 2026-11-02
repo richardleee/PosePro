@@ -1,0 +1,48 @@
+name: MusePilot
+options:
+  bundleIdPrefix: com.musepilot
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: en
+  xcodeVersion: "16.0"
+settings:
+  SWIFT_VERSION: "6.0"
+  IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+  TARGETED_DEVICE_FAMILY: "1"
+targets:
+  MusePilot:
+    type: application
+    platform: iOS
+    sources:
+      - path: MusePilot
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.musepilot.app
+      PRODUCT_NAME: MusePilot
+      GENERATE_INFOPLIST_FILE: YES
+      INFOPLIST_KEY_CFBundleDisplayName: PosePro
+      INFOPLIST_KEY_NSCameraUsageDescription: "Use your camera for portraits and on-device framing guidance."
+      INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "Save the photos you choose to your Photos library."
+      INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+      INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+      INFOPLIST_KEY_UILaunchScreen_Generation: YES
+      SWIFT_STRICT_CONCURRENCY: complete
+  MusePilotTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: MusePilotTests
+    dependencies:
+      - target: MusePilot
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.musepilot.app.tests
+      GENERATE_INFOPLIST_FILE: YES
+      SWIFT_STRICT_CONCURRENCY: complete
+schemes:
+  MusePilot:
+    build:
+      targets:
+        MusePilot: all
+        MusePilotTests: [test]
+    test:
+      targets:
+        - MusePilotTests

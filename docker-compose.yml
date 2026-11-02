@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: framecoach
+      POSTGRES_PASSWORD: framecoach
+      POSTGRES_DB: framecoach
+    ports:
+      - "5432:5432"
+    volumes:
+      - framecoach_pg:/var/lib/postgresql/data
+      - ./packages/api/src/db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+volumes:
+  framecoach_pg:

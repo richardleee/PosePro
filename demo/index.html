@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="PosePro AI Camera — an interactive portrait coaching prototype. Explore framing, camera position and poses with sample photos, or explicitly choose your camera.">
+  <title>PosePro AI Camera — A little direction. Your own portrait.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ui-refinement.css">
+  <link rel="stylesheet" href="ui-pages.css">
+</head>
+<body>
+  <div class="desktop-intro" aria-hidden="true">
+    <div class="desktop-brand"><span class="brand-spark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/><circle cx="12" cy="12" r="4"/></svg></span> PosePro</div>
+    <div class="desktop-caption">PRO PORTRAIT GUIDE.<br>NO FAKE RETOUCH.</div>
+    <h1>A little direction.<br>Your own portrait.</h1>
+    <p>Find the frame. Try a pose.<br>Help a friend get the shot.<br>Keep the result feeling like you.</p>
+    <div class="desktop-foot"><span class="live-dot"></span> INTERACTIVE MOBILE PROTOTYPE<br><span>PosePro V2.1 · One person. One tip at a time.</span></div>
+  </div>
+
+  <div class="device" id="device">
+    <div class="desktop-status" aria-hidden="true"><span>9:41</span><div class="island"></div><span class="status-icons">▮▮▮ <svg viewBox="0 0 20 20"><path d="M2 7a12 12 0 0 1 16 0M5 10a8 8 0 0 1 10 0M8 13a3 3 0 0 1 4 0"/></svg><span class="battery"></span></span></div>
+    <div class="app" id="app">
+      <header id="topbar" class="topbar"></header>
+      <main id="view" class="view" tabindex="-1" aria-label="PosePro AI Camera"></main>
+      <footer id="bottom" class="bottom"></footer>
+      <div id="modal-root"></div>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <div id="countdown" class="countdown hidden" role="dialog" aria-modal="true" aria-label="Photo countdown" aria-live="assertive"></div>
+    </div>
+    <div class="home-indicator" aria-hidden="true"></div>
+  </div>
+
+  <aside class="desktop-guide">
+    <div class="guide-label">GIVE IT A TRY <span>↙</span></div>
+    <div class="guide-step"><span>01</span><div><strong>Start with the frame</strong><p>A sample opens in Camera.<br>Choose a template or your camera.</p></div></div>
+    <div class="guide-step"><span>02</span><div><strong>Try one small change</strong><p>Browse framing, camera and pose tips.<br>Pause whenever you want.</p></div></div>
+    <div class="guide-step"><span>03</span><div><strong>Make the final choice</strong><p>Keep Original or try a color preset.<br>Save details or download a photo.</p></div></div>
+    <div class="guide-note"><span class="note-lock">◌</span><p>Reference guidance.<br><span>Sample assets are AI-generated. Tips are manual; no live pose detection runs.</span></p></div>
+    <div class="demo-label">HTML5 PROTOTYPE · NO REAL PURCHASES</div>
+  </aside>
+
+  <noscript><div class="noscript">Please enable JavaScript to use the PosePro demo.</div></noscript>
+  <script src="model.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
